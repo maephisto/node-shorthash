@@ -10,7 +10,9 @@
 exports.bitwise = bitwise;
 exports.binaryTransfer = binaryTransfer;
 exports.unique = unique;
+exports.setDictionary = setDictionary;
 
+var dictionary = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 // refer to: http://werxltd.com/wp/2010/05/13/javascript-implementation-of-javas-string-hashcode-method/
 function bitwise(str){
@@ -27,15 +29,14 @@ function bitwise(str){
 // 10进制转化成62进制以内的进制
 // convert 10 binary to customized binary, max is 62
 function binaryTransfer(integer, binary) {
-	binary = binary || 62;
+	binary = binary || dictionary.length;
 	var stack = [];
 	var num;
 	var result = '';
 	var sign = integer < 0 ? '-' : '';
 	
 	function table (num) {
-		var t = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-		return t[num];
+		return dictionary[num];
 	}
 	
 	integer = Math.abs(integer);
@@ -63,6 +64,10 @@ function binaryTransfer(integer, binary) {
  * eg: -aGtzd will be ZaGtzd
  */
 function unique (text) {
-	var id = binaryTransfer(bitwise(text), 61);
+	var id = binaryTransfer(bitwise(text), dictionary.length - 1);
 	return id.replace('-', 'Z');
+}
+
+function setDictionary(dict) {
+    dictionary = dict;
 }

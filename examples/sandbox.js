@@ -1,6 +1,8 @@
 
 var shorthash = require('../index.js');
 
+shorthash.setDictionary('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+
 function randomNumber () {
 	var min=0, max;
 	switch(arguments.length) {

@@ -4,6 +4,7 @@
 + Use shorthash when you want to encrypt a string like a movie name or a people name to a short, unique and url friendly id.
 + so with shorthash, you can build an id-string map, instead of quering the id from db each time, you just calculate the id out on the fly. 
 + it's quite convenient in many conditions if you want to build a site like [书本画](http://shubenhua.com), a book search engine in China.
++ set hash dictionary - the list of characters allowed in the hash
 
 
 ## Usage
@@ -26,3 +27,7 @@ console.log(sh.unique('和平'));
 // you will get: 33NM
 
 ```
+
+#### set hash dictionary
+var sh = require("shorthash");
+sh.setDictionary ('qwertyuiopasdfghjkl');
