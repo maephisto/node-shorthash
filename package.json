@@ -1,21 +1,26 @@
 {
-	"author": {
-		"name": "Bibig",
-		"email": "bibig@me.com",
-		"url": "https://twitter.com/bibig"
-	  },
-    "name": "shorthash",
-    "version": "0.0.4",
-    "description": "generate a short unique hash based on a long string",
-    "preferGlobal": "true",
-    "main": "index.js",
-    "keywords": ["hash", "shorthash"],
-    "repository" : {
-        "type": "git",
-        "url": "https://github.com/bibig/node-shorthash.git"
-    },
-    "license": "MIT",
-    "readmeFilename": "README.md",
-    "dependencies": {},
-    "engines": { "node": "*" }
+  "author": {
+    "name": "Bibig",
+    "email": "bibig@me.com",
+    "url": "https://twitter.com/bibig"
+  },
+  "name": "shorthash",
+  "version": "0.0.5",
+  "description": "generate a short unique hash based on a long string",
+  "preferGlobal": "true",
+  "main": "index.js",
+  "keywords": [
+    "hash",
+    "shorthash"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bibig/node-shorthash.git"
+  },
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {},
+  "engines": {
+    "node": "*"
+  }
 }
