@@ -29,5 +29,8 @@ console.log(sh.unique('和平'));
 ```
 
 #### set hash dictionary
+
+```javascript
 var sh = require("shorthash");
 sh.setDictionary ('qwertyuiopasdfghjkl');
+```
